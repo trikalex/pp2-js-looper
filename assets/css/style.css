@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+body {
+    background-color: #2c23a8;
+    font-family: 'Mochiy Pop One', sans-serif;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    color: rgb(150, 97, 0);
+    font-size: 2.5rem;
+
+}
+
+.looper-box {
+    position: absolute;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #001242;
+    display: flex;
+    flex: 8;
+    flex-direction: column;
+    width: 75%;
+    height: 55%;
+    margin: 4.5em 10%;
+}
+
+.play-area {
+    display: inline-block;
+}
+
+.instrument-area {
+    display: inline-block;
+    background-size: 70%;
+   
+
+}
+
+#kick {
+    
+    
+}
+
+#snare {
+
+}
+
+#hihat #perc {
+
+}
+
+
+
+input {
+    width: 65px;
+    height: 65px;
+    background-size: 400px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #694a11 #ffaf1b, #2e1e02 );
+    transform: translate(0%, 0%);
+    margin: 7px;
+}

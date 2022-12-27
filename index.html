@@ -1,12 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Looper</title>
 </head>
+
 <body>
-    
+    <h1 class="title">
+        <i class="fa-sharp fa-solid fa-record-vinyl"></i>Looper
+    </h1>
+
+    <div class="looper-box">
+
+        <!-- Playback and BPM area -->
+        <div class="play-area">
+            <button type="button">
+                <i class="fa-duotone fa-play"></i>
+            </button>
+            <div class="tempo">
+                <label for="input-bpm">bpm:</label>
+                <input type="number" name="bpm" id="input-bpm" min="60" max="200" value="120">
+                <!-- <div id="input-bpm-refresh" class="tempo-refresh">
+              <i class="fa-solid fa-arrows-rotate"></i> -->
+            </div>
+        </div>
+
+        <!-- Instrument & sequencer area-->
+        <div class="instrument-area">
+            <div id="kick">
+                <button class="kick-select">KICK</button>
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+            </div>
+            <div id="snare">
+                <button class="snare-select">SNARE</button>
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+            </div>
+            <div id="hihat">
+                <button class="hihat-select">HI-HAT</button>
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+            </div>
+            <div id="perc">
+                <button class="perc-select">PERC</button>
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+            </div>
+        </div>
+
+        <!-- Step edit area -->
+        <div class="step-edit">
+
+            <div class="add-rem">
+                <button data-type="addition" class="btn-plus">
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <button data-type="subtract" class="btn-minus">
+                    <i class="fas fa-minus"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/05fc023ef5.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
