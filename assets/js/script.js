@@ -15,7 +15,7 @@ function removeSteps() {
 
 }
 
-function adjustVelocity() {
+function stepVelocity() {
     
 }
 
