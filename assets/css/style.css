@@ -22,7 +22,6 @@ body {
     flex: 8;
     flex-direction: column;
     width: 75%;
-    height: 55%;
     margin: 4.5em 10%;
 }
 
@@ -43,7 +42,7 @@ body {
 }
 
 #snare {
-
+   
 }
 
 #hihat #perc {
@@ -53,8 +52,8 @@ body {
 
 
 input {
-    width: 65px;
-    height: 65px;
+    width: 35px;
+    height: 35px;
     background-size: 400px;
     cursor: pointer;
     background: linear-gradient(90deg, #694a11 #ffaf1b, #2e1e02 );

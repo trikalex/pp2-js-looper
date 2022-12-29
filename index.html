@@ -22,21 +22,27 @@
 
         <!-- Playback and BPM area -->
         <div class="play-area">
-            <button type="button">
-                <i class="fa-duotone fa-play"></i>
+            <button id="play" type="button">
+                <i class="fa-solid fa-play"></i>
             </button>
-            <div class="tempo">
+            <!-- <div class="tempo"> -->
                 <label for="input-bpm">bpm:</label>
                 <input type="number" name="bpm" id="input-bpm" min="60" max="200" value="120">
                 <!-- <div id="input-bpm-refresh" class="tempo-refresh">
               <i class="fa-solid fa-arrows-rotate"></i> -->
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- Instrument & sequencer area-->
         <div class="instrument-area">
             <div id="kick">
-                <button class="kick-select">KICK</button>
+                <select name="kick" id="kick-menu">
+                    <option selected disabled>Kick Select</option>
+                    <option value="kick/kick1">kick1</option>
+                    <option value="kick/kick2">kick2</option>
+                    <option value="kick/kick3">kick3</option>
+                    <option value="kick/kick4">kick4</option>
+                </select>
                 <input type="checkbox">
                 <input type="checkbox">
                 <input type="checkbox">
@@ -55,7 +61,13 @@
                 <input type="checkbox">
             </div>
             <div id="snare">
-                <button class="snare-select">SNARE</button>
+                <select name="snare" id="snare-menu">
+                    <option selected disabled>Snare Select</option>
+                    <option value="snare/snare1">snare1</option>
+                    <option value="snare/snare2">snare2</option>
+                    <option value="snare/snare3">snare3</option>
+                    <option value="snare/snare4">snare4</option>
+                </select>
                 <input type="checkbox">
                 <input type="checkbox">
                 <input type="checkbox">
@@ -74,7 +86,13 @@
                 <input type="checkbox">
             </div>
             <div id="hihat">
-                <button class="hihat-select">HI-HAT</button>
+                <select name="hihat" id="hihat-menu">
+                    <option selected disabled>Hihat Select</option>
+                    <option value="hihat/hihat1">hihat1</option>
+                    <option value="hihat/hihat2">hihat2</option>
+                    <option value="hihat/hihat3">hihat3</option>
+                    <option value="hihat/hihat4">hihat4</option>
+                </select>
                 <input type="checkbox">
                 <input type="checkbox">
                 <input type="checkbox">
@@ -93,7 +111,13 @@
                 <input type="checkbox">
             </div>
             <div id="perc">
-                <button class="perc-select">PERC</button>
+                <select name="perc" id="perc-menu">
+                    <option selected disabled>Perc Select</option>
+                    <option value="perc/perc1">perc1</option>
+                    <option value="perc/perc2">perc2</option>
+                    <option value="perc/perc3">perc3</option>
+                    <option value="perc/perc4">perc4</option>
+                </select>
                 <input type="checkbox">
                 <input type="checkbox">
                 <input type="checkbox">
