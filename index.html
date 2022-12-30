@@ -21,46 +21,47 @@
     <div class="looper-box">
 
         <!-- Playback and BPM area -->
-        <div class="play-area">
+        <div class="control-area">
             <button id="play" type="button">
-                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-circle-play"></i>
             </button>
-            <!-- <div class="tempo"> -->
+            <button id="stop" type="button">
+                <i class="fa-solid fa-circle-stop"></i>
+            </button>
                 <label for="input-bpm">bpm:</label>
                 <input type="number" name="bpm" id="input-bpm" min="60" max="200" value="120">
                 <!-- <div id="input-bpm-refresh" class="tempo-refresh">
               <i class="fa-solid fa-arrows-rotate"></i> -->
-            <!-- </div> -->
         </div>
 
         <!-- Instrument & sequencer area-->
         <div class="instrument-area">
-            <div id="kick">
+            <div class="kick">
                 <select name="kick" id="kick-menu">
                     <option selected disabled>Kick Select</option>
                     <option value="kick/kick1">kick1</option>
                     <option value="kick/kick2">kick2</option>
                     <option value="kick/kick3">kick3</option>
                     <option value="kick/kick4">kick4</option>
-                </select>
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
+                </select>        
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
             </div>
-            <div id="snare">
+            <div class="snare">
                 <select name="snare" id="snare-menu">
                     <option selected disabled>Snare Select</option>
                     <option value="snare/snare1">snare1</option>
@@ -85,7 +86,7 @@
                 <input type="checkbox">
                 <input type="checkbox">
             </div>
-            <div id="hihat">
+            <div class="hihat">
                 <select name="hihat" id="hihat-menu">
                     <option selected disabled>Hihat Select</option>
                     <option value="hihat/hihat1">hihat1</option>
@@ -110,7 +111,7 @@
                 <input type="checkbox">
                 <input type="checkbox">
             </div>
-            <div id="perc">
+            <div class="perc">
                 <select name="perc" id="perc-menu">
                     <option selected disabled>Perc Select</option>
                     <option value="perc/perc1">perc1</option>
@@ -154,7 +155,7 @@
         </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script2.js"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/05fc023ef5.js" crossorigin="anonymous"></script>
 </body>

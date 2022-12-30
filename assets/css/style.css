@@ -23,10 +23,15 @@ body {
     flex-direction: column;
     width: 75%;
     margin: 4.5em 10%;
+  
 }
 
-.play-area {
+.control-area {
     display: inline-block;
+    text-align: left;
+    color: rgb(150, 97, 0);
+    background-size: 100px;
+    height: 50px;
 }
 
 .instrument-area {
@@ -59,4 +64,8 @@ input {
     background: linear-gradient(90deg, #694a11 #ffaf1b, #2e1e02 );
     transform: translate(0%, 0%);
     margin: 7px;
+}
+
+#play {
+   
 }

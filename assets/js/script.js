@@ -11,17 +11,34 @@ let percAudio = new Audio(percSound);
 let playBtn = document.getElementById('play');
 playBtn.addEventListener('click', playLoop);
 
+// let stopBtn = document.getElementById('stop');
+// stopBtn.addEventListener('click', exit.playLoop);
+
 let bpmInput = document.getElementById('input-bpm');
 let bpm = bpmInput.value;
 
 let loopInterval;
 
-function playLoop() {
+let tempo = 100;
+let rhythmIndex = 1;
+let playing = false;
+let sixteenthNoteTime;
+let timer;
+
+// function playLoop() {
+
+function playLoop(){
+    sixteenthNoteTime = 60 / bpm / 4;
+    timer = setTimeout(function(){
+      playCurrentIndex()
+      playLoop()
+    }, sixteenthNoteTime*1000)
+    
     let kicksToPlay = [];
     let snaresToPlay = [];
     let hihatsToPlay = [];
     let percsToPlay = [];
-    let kickInputs = document.querySelectorAll('#kick input');
+    let kickInputs = document.querySelectorAll('.kick input');
     kickInputs.forEach(input => {
         if (input.checked) {
             kicksToPlay.push(1);
@@ -29,7 +46,7 @@ function playLoop() {
             kicksToPlay.push(0);
         }
     });
-    let snareInputs = document.querySelectorAll('#snare input');
+    let snareInputs = document.querySelectorAll('.snare input');
     snareInputs.forEach(input => {
         if (input.checked) {
             snaresToPlay.push(1);
@@ -37,7 +54,7 @@ function playLoop() {
             snaresToPlay.push(0);
         }
     });
-    let hihatInputs = document.querySelectorAll('#hihat input');
+    let hihatInputs = document.querySelectorAll('.hihat input');
     hihatInputs.forEach(input => {
         if (input.checked) {
             hihatsToPlay.push(1);
@@ -45,7 +62,7 @@ function playLoop() {
             hihatsToPlay.push(0);
         }
     });
-    let percInputs = document.querySelectorAll('#perc input');
+    let percInputs = document.querySelectorAll('.perc input');
     percInputs.forEach(input => {
         if (input.checked) {
             percsToPlay.push(1);
@@ -90,12 +107,6 @@ bpmInput.addEventListener('change', changeBpm);
 
 function changeBpm() {
     bpmInput.value = Math.round(bpmInput.value);
-    // if (bpmInput.value < bpmInput.min) {
-    //     bpmInput.value = bpmInput.min;
-    // } else if (bpmInput.value > bpmInput.max) {
-    //     bpmInput.value = bpmInput.max;
-    // }
-
     clearInterval(loopInterval);
     bpm = (60 / bpmInput.value) * 250;
     playLoop();
