@@ -28,12 +28,6 @@ let timer;
 // function playLoop() {
 
 function playLoop(){
-    sixteenthNoteTime = 60 / bpm / 4;
-    timer = setTimeout(function(){
-      playCurrentIndex()
-      playLoop()
-    }, sixteenthNoteTime*1000)
-    
     let kicksToPlay = [];
     let snaresToPlay = [];
     let hihatsToPlay = [];
@@ -76,6 +70,7 @@ function playLoop(){
     console.log("perc = ", percsToPlay);
 
     loopInterval = setInterval(function() {
+        
         kicksToPlay.forEach(kick => {
             if (kick === 1) {
                 kickAudio.currentTime = 0;
